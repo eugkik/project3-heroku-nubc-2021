@@ -3,13 +3,14 @@ from sqlalchemy.engine import create_engine
 import joblib
 import psycopg2
 from flask_cors import CORS
+import os
 #from config import pw
 
 app = Flask(__name__)
 
 CORS(app)
 
-pw = os.getenv('PASSWORD')
+PASSWORD = os.getenv('PASSWORD')
 
 DATABASE_URI = f"postgresql+psycopg2://henorakrtnepye:{pw}@ec2-34-233-214-228.compute-1.amazonaws.com:5432/dfq5ifardm38b6"
 engine = create_engine(DATABASE_URI)
