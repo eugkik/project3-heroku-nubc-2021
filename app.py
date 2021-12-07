@@ -4,7 +4,6 @@ import joblib
 import psycopg2
 from flask_cors import CORS
 import os
-#from config import pw
 
 app = Flask(__name__)
 
