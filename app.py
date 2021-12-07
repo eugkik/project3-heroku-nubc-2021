@@ -12,7 +12,7 @@ CORS(app)
 
 PASSWORD = os.getenv('PASSWORD')
 
-DATABASE_URI = f"postgresql+psycopg2://henorakrtnepye:{pw}@ec2-34-233-214-228.compute-1.amazonaws.com:5432/dfq5ifardm38b6"
+DATABASE_URI = f"postgresql+psycopg2://henorakrtnepye:{PASSWORD}@ec2-34-233-214-228.compute-1.amazonaws.com:5432/dfq5ifardm38b6"
 engine = create_engine(DATABASE_URI)
 
 
@@ -75,7 +75,7 @@ def predict():
         insert_data = input_data
         insert_data.append(result[0])
 
-        conn = psycopg2.connect(database='dfq5ifardm38b6', user='henorakrtnepye', password=pw, host='ec2-34-233-214-228.compute-1.amazonaws.com', port= '5432')
+        conn = psycopg2.connect(database='dfq5ifardm38b6', user='henorakrtnepye', password=PASSWORD, host='ec2-34-233-214-228.compute-1.amazonaws.com', port= '5432')
         cur = conn.cursor()
         cur.execute("INSERT INTO input_data(age_at_diagnosis,chemotherapy,neoplasm_histologic_grade,hormone_therapy,lymph_nodes_examined_positive,mutation_count,radio_therapy,tumor_size,tumor_stage,encoded_type_of_breast_surgery,encoded_cancer_type_detailed,encoded_cellularity,encoded_pam50,encoded_er_status,encoded_her2_status,encoded_tumor_other_histologic_subtype,encoded_inferred_menopausal_state,encoded_integrative_cluster,encoded_pr_status,prediction) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s ,%s, %s, %s, %s, %s, %s)", insert_data)
         cur.close()
