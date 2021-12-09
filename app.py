@@ -11,11 +11,11 @@ CORS(app)
 
 # check if hosted on Heroku, set password and debug
 if 'DATABASE_URL' in os.environ:
-    password = os.getenv('PASSWORD')
+    pw = os.getenv('PASSWORD')
     debug_value = 'False'
 else:
     from config import pw
-    password = pw
+    pw = pw
     debug_value = 'True'
 
 # set Heroku variables
@@ -24,7 +24,7 @@ heroku_user = 'henorakrtnepye'
 heroku_host='ec2-34-233-214-228.compute-1.amazonaws.com'
 
 # Heroku database connection
-DATABASE_URI = f"postgresql+psycopg2://{heroku_user}:{password}@{heroku_host}:5432/{heroku_db}"
+DATABASE_URI = f"postgresql+psycopg2://{heroku_user}:{pw}@{heroku_host}:5432/{heroku_db}"
 engine = create_engine(DATABASE_URI)
 
 
