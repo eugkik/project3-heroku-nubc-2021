@@ -1,6 +1,6 @@
 // replace the url later
 url = "static/data/clinical_raw.json"
-d3.json(url).then((data) => {
+d3.json("/api/clinical_raw").then((data) => {
     var config = {responsive: true};
     //histograms
     var overall_survival_months = data.map(d => d["overall_survival_months"]);

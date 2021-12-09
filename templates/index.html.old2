@@ -8,7 +8,7 @@
         <title>Breast Cancer Survival Analytics</title>
         <link rel="icon" type="image/x-icon" href="../static/assets/favicon.ico" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="static/css/styles.css" rel="stylesheet" />
+        <link href="../static/css/styles.css" rel="stylesheet" />
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -23,7 +23,7 @@
                         <li class="nav-item"><a class="nav-link" href="#Introduction">Introduction</a></li>
                         <li class="nav-item"><a class="nav-link" href="#Data Exploration">Data Exploration</a></li>
                         <li class="nav-item"><a class="nav-link" href="#Model Selection">Model Selection</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#Conclusion">Conclusion</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#Results and Conclusion">Results and Conclusion</a></li>
                         <li class="nav-item"><a class="nav-link" href="#Our Team">Our Team</a></li>
                     </ul>
                 </div>
@@ -37,7 +37,7 @@
             <div class="hero-text">
                 <h1 class="font_4" style="line-height:1.25em;text-align:center;font-size:72px"><span class="color_32"><span style="font-weight:bold">BREAST CANCER&nbsp;<br>SURVIVAL ANALYTICS</span></span></h1>
                 <p class="lead">Developing Machine Learning Algorithms to Predict Survival</p>
-                <a class="btn btn-lg btn-light" href="{{ url_for('predict') }}">Start Assessment</a>
+                <a class="btn btn-lg btn-light" href="#Introduction">Start Assessment</a>
             </div>                 
         </header>
     
@@ -131,7 +131,7 @@
                 <div class="col-lg-8 container plot justify-content-center ">
                     <div class="card card-body bg-secondary text-white">
                       <h5>
-                          Feature Correlation
+                          Feature correlation
                       </h5>
                       <div class="card-header">
                         <div>
@@ -144,7 +144,7 @@
                       </div>
                       <div class="card-body row gx-4">
                         <div class="col-lg-7 container plot justify-content-center ">
-                            <img src="static/images/CorrelationMatrix.jpg" alt="correlationMatrix" style="height: 300px;">
+                            <img src="../static/images/CorrelationMatrix.jpg" alt="correlationMatrix" style="height: 300px;">
                         </div>
                         <div class="col-lg-5">
                         <p>
@@ -194,41 +194,6 @@
                         <h4>Supervised Machine Learning</h4>
                     </div>
                 </div>
-                <div class="col-lg-8 container plot justify-content-center ">
-                    <div class="card card-body bg-secondary text-white">
-                      <h5>
-                          Random Forest Classification
-                      </h5>
-                      <div class="card-header">
-                        <div>
-                          <h6 class="card-title text-center border-bottom"></h6>
-                            <p class="card-text">
-                                After applying the different classification models, the Random Forest Classifier produced the strongest accuracy at 0.686.
-                                Additionally, we found a weak relationship between the 19 clinical attributes and the length of survival time in months.
-                            </p>
-                        </div>
-                      </div>
-                      <div class="card-body row gx-4">
-                        <div class="col-lg-8 container plot justify-content-center ">
-                            <img src="static/images/rfc_model_results.jpg" alt="Random Forest Classification" style="height: 300px; text-align: center">
-                        </div>
-                        <hr>
-                        <div class="card-header">
-                            <div>
-                              <h6 class="card-title text-center border-bottom"></h6>
-                                <p class="card-text">
-                                    In order to discover which features have the strongest impact on the model a 
-                                    features importance graph was created to easily visualize each attribtues impact.   
-                                </p>
-                            </div>
-                          </div>
-                        <div class="col-lg-8 container plot justify-content-center">
-                            <img src="static/images/rfc_features_importance.jpg" alt="Features importance" style="height: 500px; text-align: center">
-                        </div>
-                      </div>
-                    </div>  
-                </div>
-                <br><br>
                 <!-- unsupervised machine learning-->
                 <div class="row gx-4 justify-content-center">
                     <div class="col-lg-8">
@@ -252,7 +217,7 @@
                       </div>
                       <div class="card-body row gx-4">
                         <div class="col-lg-8 container plot justify-content-center ">
-                            <img src="static/images/PCA_gene_expression.jpg" alt="PCA" style="height: 300px;">
+                            <img src="../static/images/PCA_gene_expression.jpg" alt="PCA" style="height: 300px;">
                         </div>
                         <hr>
                         <div class="card-header">
@@ -266,7 +231,7 @@
                             </div>
                           </div>
                         <div class="col-lg-8 container plot justify-content-center">
-                            <img src="static/images/LDA_gene_expression.jpg" alt="LDA" style="height: 300px;">
+                            <img src="../static/images/LDA_gene_expression.jpg" alt="LDA" style="height: 300px;">
                         </div>
                       </div>
                     </div>  
@@ -287,32 +252,20 @@
                       </div>
                       <div class="card-body row gx-4">
                         <div class="col-lg-10 container plot justify-content-center ">
-                            <img src="static/images/heatmap.png" alt="heatmap" style="height: 300px;">
+                            <img src="../static/images/heatmap.png" alt="heatmap" style="height: 300px;">
                         </div>
                       </div>
                     </div>  
                 </div>
             </div>
         </section>
-        <!-- Conclusion  section-->
-        <section id="Conclusion">
+        <!-- Results and conclusion section-->
+        <section id="Results and Conclusion">
             <div class="container px-4">
                 <div class="row gx-4 justify-content-center">
                     <div class="col-lg-8">
-                        <h2>Conclusion</h2>
-                        <p class="lead">
-                            <ul>
-                                <li>Using Random Forest Classifier, we were able to predict breast cancer patient survival outcome based on the 19 clinicopathological features. </li>
-                            <br>
-                                <li>The top important features are identified including age, tumor size, mutation count, integrative cluster, and number of positive lymph nodes examined.</li>
-                            <br>
-                                <li>Dimensional reduction and hierarchical clustering are useful tools in genomic research to examine the gene expression data. We would like to extend these techniques for mutation data in the future. </li>
-                            <br>
-                                <li>The most significant genes altered in different subtypes of breast cancer based on the unsupervised machine learning models could be extracted. The unique gene expression signatures identified will have the potential to guide personalized treatments for breast cancer patients.</li>
-                            <br>
-                                <li>In the future, we hope to improve the accuracy of prediction with more breast cancer samples are available. </li>
-                            </ul>
-                        </p>
+                        <h2>Results and Conclusion</h2>
+                        <p class="lead">After applying the different classification models, the Random Forest Classifier produced the strongest accuracy at 0.696. Additionally, we found a weak relationship between the 19 clinical attributes and the length of survival time in months. </p>
                     </div>
                 </div>
             </div>
@@ -330,12 +283,12 @@
             <div class="row">
                 <div class="col-md-1"></div>
                 <div class="box col-md-2" onclick="window.open(href=&quot;https://github.com/NickP20&quot;)">
-                    <img src="{{url_for('static', filename ='images/np.jpg')}}" alt="Nick" width="140" height="140" class="rounded-circle">
+                    <img src="https://images.unsplash.com/photo-1638727599830-5e72988254b7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" alt="Nick" width="140" height="140" class="rounded-circle">
                     <h4>Nick Prieto</h4>
                     <p>View Profile</p>
                 </div>
                 <div class="box col-md-2" onclick="window.open(href=&quot;https://github.com/ZiboZhao0804&quot;)">
-                    <img src="{{url_for('static', filename ='images/Zibo1.jpg')}}" alt="Zibo" width="140" height="140" class="rounded-circle">
+                    <img src="https://images.unsplash.com/photo-1638727599830-5e72988254b7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" alt="Zibo" width="140" height="140" class="rounded-circle">
                     <h4>Zibo Zhao</h4>
                     <p>View Profile</p>
                 </div>
@@ -366,9 +319,9 @@
         <!--d3 and plotly-->
         <script src="https://d3js.org/d3.v5.min.js"></script>
         <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-        <script type="text/javascript" src="static/js/plots.js"></script>
+        <script type="text/javascript" src="../static/js/plots.js"></script>
         <!-- Core theme JS-->
-        <script type="text/javascript" src="static/js/scripts.js"></script>
+        <script type="text/javascript" src="../static/js/scripts.js"></script>
 
 
     </body>

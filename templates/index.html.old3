@@ -23,7 +23,7 @@
                         <li class="nav-item"><a class="nav-link" href="#Introduction">Introduction</a></li>
                         <li class="nav-item"><a class="nav-link" href="#Data Exploration">Data Exploration</a></li>
                         <li class="nav-item"><a class="nav-link" href="#Model Selection">Model Selection</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#Conclusion">Conclusion</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#Results and Conclusion">Results and Conclusion</a></li>
                         <li class="nav-item"><a class="nav-link" href="#Our Team">Our Team</a></li>
                     </ul>
                 </div>
@@ -131,7 +131,7 @@
                 <div class="col-lg-8 container plot justify-content-center ">
                     <div class="card card-body bg-secondary text-white">
                       <h5>
-                          Feature Correlation
+                          Feature correlation
                       </h5>
                       <div class="card-header">
                         <div>
@@ -294,31 +294,19 @@
                 </div>
             </div>
         </section>
-        <!-- Conclusion  section-->
-        <section id="Conclusion">
+        <!-- Results and conclusion section-->
+        <section id="Results and Conclusion">
             <div class="container px-4">
                 <div class="row gx-4 justify-content-center">
                     <div class="col-lg-8">
-                        <h2>Conclusion</h2>
-                        <p class="lead">
-                            <ul>
-                                <li>Using Random Forest Classifier, we were able to predict breast cancer patient survival outcome based on the 19 clinicopathological features. </li>
-                            <br>
-                                <li>The top important features are identified including age, tumor size, mutation count, integrative cluster, and number of positive lymph nodes examined.</li>
-                            <br>
-                                <li>Dimensional reduction and hierarchical clustering are useful tools in genomic research to examine the gene expression data. We would like to extend these techniques for mutation data in the future. </li>
-                            <br>
-                                <li>The most significant genes altered in different subtypes of breast cancer based on the unsupervised machine learning models could be extracted. The unique gene expression signatures identified will have the potential to guide personalized treatments for breast cancer patients.</li>
-                            <br>
-                                <li>In the future, we hope to improve the accuracy of prediction with more breast cancer samples are available. </li>
-                            </ul>
-                        </p>
+                        <h2>Results and Conclusion</h2>
+                        <p class="lead"></p>
                     </div>
                 </div>
             </div>
         </section>
         <!-- Our Team section-->
-        <section id="Our Team">
+        <section id="Our_Team">
             <div class="container px-4">
                 <div class="row gx-4 justify-content-center">
                     <div class="col-lg-8">

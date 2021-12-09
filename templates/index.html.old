@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+      
+        <header class="bg-primary bg-gradient text-white">
+            <div class="container px-4 text-center">
+                <h1 class="font_4" style="line-height:1.25em;text-align:center;font-size:72px"><span class="color_32"><span style="font-weight:bold">BREAST CANCER&nbsp;<br>SURVIVAL ANALYTICS</span></span></h1>
+                <p class="lead">Developing Machine Learning Algorithms that Predict Survival</p>
+                <a class="btn btn-lg btn-light" href="predict">Start Assessment</a>
+            </div> 
+    
+        </header>
+        <!-- Introduction section-->
+        <section id="Introduction">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>Introduction</h2>
+                        <p class="lead">Breast cancer is the most common cancer worldwide and is a leading cause of cancer death for women. The purpose of this project was to analyze how accurate the various clinical characteristics predict survival and survival duration. The dataset used was obtained from <a href="https://www.kaggle.com/raghadalharbi/breast-cancer-gene-expression-profiles-metabric">Kaggle</a> and contains clinical data and gene expression profiles. </p>
+                        <ul>
+                            <li>1904 breast cancer patients</li>
+                            <li>30 clinical attributes (not including patient id)</li>
+                            <li>m-RNA levels z-score for 489 genes</li>
+                            <li>mutation in 173 genes</li>                         
+                        </ul>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Data Exploration section-->
+        <section class="bg-light" id="Data Exploration">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>Data Exploration</h2>
+                        <p class="lead">The analysis aims to observe which features are most helpful in predicting patient survival and to see general trends that may aid us in model selection. To do this, the necessary libraries are imported as well as the dataset. Redundant columns and non-important features are dropped from the dataset and label encoder is used to label the categorical data into numbers. Pandas' visualization and r-programming is used to find the data distribution of the features. </p>
+                    </div>
+                </div>
+                <div class="col-lg-8 container plot justify-content-center">
+                    <img src="Images/PPT1.png" alt="CA4" class="gallery__img">
+                </div>
+            </div>
+        </section>
+        <!-- Model Selection section-->
+        <section id="Model Selection">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>Model Selection</h2>
+                        <p class="lead">We use classification algorithms of supervised learning with our our outcome variable having two sets of values, either live or die. 19 clinical attributes are used with the different type of models in Machine Learning including: Logistic Regression, Support Vector Classification, Random Forest Classifier, AdaBoost Classifier, and XGBoost Classifier. For each classification model, we will predict the test set results and check the accuracy using the confusion matrix. In addition to testing surival of patients, the linear regression model was used to determine if there is a correlation to the overall survival time in months.  </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Results and conclusion section-->
+        <section id="Results and Conclusion">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>Results and Conclusion</h2>
+                        <p class="lead">After applying the different classification models, the Random Forest Classifier produced the strongest accuracy at 0.696. Additionally, we found a weak relationship between the 19 clinical attributes and the length of survival time in months. </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Our Team section-->
+        <section id="Our Team">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>Our Team</h2>
+                        <p class="lead"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+{% endblock %}
